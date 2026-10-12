@@ -47,10 +47,6 @@ export function useLocale(): Ctx {
   return c;
 }
 
-export function useVariant(): Variant {
-  return useLocale().variant;
-}
-
 export function useT(): Dict {
   const { locale, variant } = useLocale();
   return dicts[variant][locale];

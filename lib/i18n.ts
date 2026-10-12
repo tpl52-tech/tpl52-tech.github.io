@@ -42,7 +42,6 @@ export type Dict = {
   workedAt: string;
   contact: { heading: string; sub: string };
   footer: { left: string; right: string };
-  switcher: { toPm: string; toSwe: string };
 };
 
 export const dict: Record<Locale, Dict> = {
@@ -99,7 +98,6 @@ export const dict: Record<Locale, Dict> = {
       sub: "Have a product that deserves real craft? I'm booking interface and motion work for the next quarter.",
     },
     footer: { left: "© 2026 Tess Lee", right: "Software engineer, Queens NY" },
-    switcher: { toPm: "PM version", toSwe: "Engineer version" },
   },
 
   fr: {
@@ -155,7 +153,6 @@ export const dict: Record<Locale, Dict> = {
       sub: "Un produit qui mérite un vrai soin ? Je réserve des missions d'interface et de motion pour le prochain trimestre.",
     },
     footer: { left: "© 2026 Tess Lee", right: "Ingénieure logiciel, Queens NY" },
-    switcher: { toPm: "Version PM", toSwe: "Version ingénieure" },
   },
 
   ko: {
@@ -211,7 +208,6 @@ export const dict: Record<Locale, Dict> = {
       sub: "진짜 완성도가 필요한 제품이 있나요? 다음 분기 인터페이스·모션 작업을 받고 있습니다.",
     },
     footer: { left: "© 2026 Tess Lee", right: "소프트웨어 엔지니어, 퀸스" },
-    switcher: { toPm: "PM 버전", toSwe: "엔지니어 버전" },
   },
 };
 
