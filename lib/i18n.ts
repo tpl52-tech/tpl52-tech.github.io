@@ -223,33 +223,25 @@ export const dict: Record<Locale, Dict> = {
  */
 export const dictPM: Record<Locale, Dict> = {
   en: {
+    ...dict.en,
     availability: "open to product roles",
-    nav: { work: "Work", about: "Education", contact: "Contact" },
-    cta: { viewWork: "View work", getInTouch: "Get in touch", viewRepo: "View on GitHub" },
-    ui: { dark: "Dark", light: "Light", copy: "Copy", copied: "Copied", theme: "Theme" },
     hero: {
       bio: [
         "Hi! I'm Tess, an engineer moving toward product. Right now I'm a software engineering intern at Dorsia (an Index Ventures backed startup) and a junior studying Computer Science and Mathematics at Cornell University. On campus I lead the software team at Engineers Without Borders, where I own the roadmap for a cross-platform marketplace app: I set the scope, sequence the work for a 15-person team, and clear the blockers that keep us shipping.",
         "I like turning ambiguous problems into products that ship and get used. I've taken a team from roughly 10% to 70% done while lifting our delivery pace close to 8x, and I've built the systems that keep hundreds of thousands of users and real money safe once they are in play. I think in outcomes and tradeoffs, I'm fluent in the technical details (REST APIs, data models, AI agent workflows), and I care most about shipping the right thing.",
       ],
     },
-    about: {
-      heading: "Education",
-      coursework: "Relevant coursework",
-      activities: "Activities",
-      expected: "Expected",
-    },
     work: {
+      ...dict.en.work,
       heading: "A few things I've shipped",
       blurbs: {
         reuse: "A marketplace I've led for the past year and a half, built with Cornell Engineers Without Borders for Finger Lakes ReUse, a nonprofit that reported about $3.3M in sales in 2025. I decide what gets built and in what order: shoppers browse, filter, and buy secondhand goods with in-app payment and scheduled pickup, while donors list items and staff approve and price them. The real work is choosing which of those flows matters most next and making sure it lands for real users.",
         borderless: "A system I built to run my EWB team's delivery pipeline when we were always against a deadline. It coordinates AI coding agents to take each change through code review and CI until it is ready to merge, so a small volunteer team ships like a much bigger one. It came from a product instinct: find the real bottleneck, which was throughput and not ideas, and remove it.",
         greenlight: "A testing system that lets non-technical volunteers QA real features. Screen-verifiable work becomes tap-through run sheets in a clean web app with live shared results, while backend-only changes are checked automatically. I designed it so quality was no longer gated on engineers, which let the team move faster without shipping regressions.",
       },
-      privateNote: "Source private, as it runs a live nonprofit service",
     },
     experience: {
-      heading: "Experience",
+      ...dict.en.experience,
       bullets: {
         "dorsia-swe": [
           "Shipped features across Dorsia's member-facing reservations platform (hundreds of thousands of members) and its internal operations tools, including turning the Trust & Safety dashboard from a read-only mirror into a tool the team can actually act on.",
@@ -269,43 +261,33 @@ export const dictPM: Record<Locale, Dict> = {
         ],
       },
     },
-    workedAt: "Places I've worked",
     contact: {
       heading: "Let's build something people use.",
       sub: "I'm looking for product management internships where I can own scope, work closely with engineering, and ship to real users. If that sounds like your team, reach out.",
     },
-    footer: { left: "© 2026 Tess Lee", right: "Aspiring product manager, Queens NY" },
-    switcher: { toPm: "PM version", toSwe: "Engineer version" },
+    footer: { ...dict.en.footer, right: "Aspiring product manager, Queens NY" },
   },
 
   fr: {
+    ...dict.fr,
     availability: "ouverte aux postes en produit",
-    nav: { work: "Projets", about: "Formation", contact: "Contact" },
-    cta: { viewWork: "Voir les projets", getInTouch: "Me contacter", viewRepo: "Voir sur GitHub" },
-    ui: { dark: "Sombre", light: "Clair", copy: "Copier", copied: "Copié", theme: "Thème" },
     hero: {
       bio: [
         "Salut ! Je suis Tess, une ingénieure qui s'oriente vers le produit. En ce moment, je suis ingénieure logiciel en stage chez Dorsia (une startup financée par Index Ventures) et étudiante en troisième année d'informatique et de mathématiques à Cornell University. Sur le campus, je dirige l'équipe logicielle d'Engineers Without Borders, où je porte la feuille de route d'une application marketplace cross-platform : je définis le périmètre, j'ordonne le travail pour une équipe de 15 personnes et je lève les blocages qui nous permettent de livrer.",
         "J'aime transformer des problèmes flous en produits qui sont déployés et réellement utilisés. J'ai fait passer une équipe d'environ 10 % à 70 % d'avancement tout en multipliant notre rythme de livraison par près de 8, et j'ai construit les systèmes qui gardent des centaines de milliers d'utilisateurs et de l'argent réel en sécurité une fois en jeu. Je raisonne en résultats et en arbitrages, je suis à l'aise avec les détails techniques (API REST, modèles de données, workflows d'agents IA), et ce qui me tient le plus à cœur, c'est de livrer la bonne chose.",
       ],
     },
-    about: {
-      heading: "Formation",
-      coursework: "Cours pertinents",
-      activities: "Activités",
-      expected: "Prévu",
-    },
     work: {
+      ...dict.fr.work,
       heading: "Quelques réalisations",
       blurbs: {
         reuse: "Une marketplace dont je dirige le développement depuis un an et demi, construite avec Cornell Engineers Without Borders pour Finger Lakes ReUse, une association qui a réalisé environ 3,3 millions de dollars de ventes en 2025. Je décide de ce qui est construit et dans quel ordre : les acheteurs parcourent, filtrent et achètent des articles d'occasion avec paiement intégré et retrait programmé, tandis que les donateurs publient leurs articles et l'équipe les valide et fixe leur prix. Le vrai travail, c'est de choisir quel parcours compte le plus ensuite et de m'assurer qu'il fonctionne pour de vrais utilisateurs.",
         borderless: "Un système que j'ai conçu pour faire tourner le pipeline de livraison de mon équipe EWB quand nous étions toujours soumis à des délais serrés. Il coordonne des agents de codage IA pour faire passer chaque changement par la revue de code et la CI jusqu'à ce qu'il soit prêt à fusionner, pour qu'une petite équipe de bénévoles livre comme une bien plus grande. C'est né d'un instinct produit : trouver le vrai goulot d'étranglement, qui était le débit et non les idées, et le supprimer.",
         greenlight: "Un système de test qui permet à des bénévoles non techniques de faire le QA de vraies fonctionnalités. Le travail vérifiable à l'écran devient des parcours de test tactiles dans une application web épurée, avec des résultats partagés en direct, tandis que les changements purement backend sont vérifiés automatiquement. Je l'ai conçu pour que la qualité ne dépende plus des ingénieurs, ce qui a permis à l'équipe d'aller plus vite sans livrer de régressions.",
       },
-      privateNote: "Code source privé, car il fait tourner un service associatif en production",
     },
     experience: {
-      heading: "Expérience",
+      ...dict.fr.experience,
       bullets: {
         "dorsia-swe": [
           "Livré des fonctionnalités sur la plateforme de réservations de Dorsia destinée aux membres (des centaines de milliers de membres) ainsi que sur ses outils internes d'exploitation, dont la transformation du tableau de bord Trust & Safety, passé d'un simple miroir en lecture seule à un outil sur lequel l'équipe peut réellement agir.",
@@ -325,43 +307,33 @@ export const dictPM: Record<Locale, Dict> = {
         ],
       },
     },
-    workedAt: "Où j'ai travaillé",
     contact: {
       heading: "Construisons quelque chose d'utile.",
       sub: "Je cherche un stage en product management où je pourrai porter le périmètre, travailler main dans la main avec l'ingénierie et livrer à de vrais utilisateurs. Si cela ressemble à votre équipe, écrivez-moi.",
     },
-    footer: { left: "© 2026 Tess Lee", right: "Future product manager, Queens NY" },
-    switcher: { toPm: "Version PM", toSwe: "Version ingénieure" },
+    footer: { ...dict.fr.footer, right: "Future product manager, Queens NY" },
   },
 
   ko: {
+    ...dict.ko,
     availability: "프로덕트 직무를 찾고 있어요",
-    nav: { work: "작업", about: "소개", contact: "연락처" },
-    cta: { viewWork: "작업 보기", getInTouch: "연락하기", viewRepo: "GitHub에서 보기" },
-    ui: { dark: "다크", light: "라이트", copy: "복사", copied: "복사됨", theme: "테마" },
     hero: {
       bio: [
         "안녕하세요! 저는 Tess예요. 프로덕트 쪽으로 방향을 넓혀 가는 엔지니어입니다. 지금은 Dorsia(Index Ventures가 투자한 스타트업)에서 소프트웨어 엔지니어 인턴으로 일하면서, 코넬대학교에서 컴퓨터과학·수학 복수전공 3학년 과정을 밟고 있어요. 교내에서는 Engineers Without Borders의 소프트웨어 팀을 이끌며 크로스플랫폼 마켓플레이스 앱의 로드맵을 책임지고 있습니다. 범위를 정하고, 15명 규모의 팀이 할 일의 순서를 잡고, 계속 배포할 수 있도록 병목을 걷어냅니다.",
         "모호한 문제를 실제로 배포되고 쓰이는 프로덕트로 바꾸는 일을 좋아해요. 한 팀을 약 10%에서 70% 완성도까지 끌어올리면서 전달 속도를 거의 8배로 높였고, 수십만 명의 사용자와 실제 돈이 걸린 상황에서도 안전하게 동작하는 시스템을 직접 만들었습니다. 결과와 트레이드오프로 사고하고, 기술적인 디테일(REST API, 데이터 모델, AI 에이전트 워크플로우)에도 익숙하며, 무엇보다 '맞는 것'을 배포하는 데 가장 신경 씁니다.",
       ],
     },
-    about: {
-      heading: "학력",
-      coursework: "주요 수강 과목",
-      activities: "활동",
-      expected: "졸업 예정",
-    },
     work: {
+      ...dict.ko.work,
       heading: "제가 만든 몇 가지",
       blurbs: {
         reuse: "제가 1년 반 동안 이끌어 온 마켓플레이스로, 코넬 Engineers Without Borders와 함께 Finger Lakes ReUse를 위해 만들었습니다. 이 비영리단체는 2025년에 약 330만 달러의 매출을 올렸어요. 무엇을 어떤 순서로 만들지 제가 결정합니다. 구매자는 중고 물품을 둘러보고 필터링해 앱 내 결제와 예약 픽업으로 구매하고, 기부자는 물품을 올리며 담당 직원이 이를 승인하고 가격을 매깁니다. 진짜 중요한 일은 다음에 어떤 흐름이 가장 중요한지 고르고, 그것이 실제 사용자에게 제대로 닿게 하는 것입니다.",
         borderless: "늘 마감에 쫓기던 제 EWB 팀의 배포 파이프라인을 운영하려고 만든 시스템입니다. AI 코딩 에이전트를 조율해 각 변경을 코드 리뷰와 CI를 거쳐 머지 가능한 상태까지 끌고 가서, 작은 자원봉사 팀이 훨씬 큰 팀처럼 배포하게 해줍니다. 프로덕트적 직감에서 출발했어요. 진짜 병목(아이디어가 아니라 처리량)을 찾아 없애자는 것이었죠.",
         greenlight: "비개발자 자원봉사자도 실제 기능을 QA할 수 있게 해주는 테스트 시스템입니다. 화면에서 확인 가능한 작업은 깔끔한 웹앱에서 탭으로 진행하는 체크리스트가 되어 결과가 실시간으로 공유되고, 백엔드 전용 변경은 자동으로 검증됩니다. 품질이 더 이상 엔지니어에게만 묶이지 않도록 설계해, 팀이 회귀 없이 더 빠르게 움직일 수 있게 했습니다.",
       },
-      privateNote: "실제 운영 중인 비영리 서비스의 코드라 소스는 비공개입니다",
     },
     experience: {
-      heading: "경력",
+      ...dict.ko.experience,
       bullets: {
         "dorsia-swe": [
           "Dorsia의 회원 대상 예약 플랫폼(수십만 명의 회원)과 내부 운영 도구 전반에 걸쳐 기능을 출시했으며, 특히 Trust & Safety 대시보드를 읽기 전용 미러에서 팀이 실제로 조치를 취할 수 있는 도구로 바꿨습니다.",
@@ -381,13 +353,11 @@ export const dictPM: Record<Locale, Dict> = {
         ],
       },
     },
-    workedAt: "제가 일한 곳",
     contact: {
       heading: "사람들이 쓰는 걸 함께 만들어요.",
       sub: "범위를 직접 책임지고, 엔지니어링과 가까이 협업하며, 실제 사용자에게 배포할 수 있는 프로덕트 매니지먼트 인턴십을 찾고 있어요. 그런 팀이라면 편하게 연락 주세요.",
     },
-    footer: { left: "© 2026 Tess Lee", right: "프로덕트 매니저 지망, 퀸스" },
-    switcher: { toPm: "PM 버전", toSwe: "엔지니어 버전" },
+    footer: { ...dict.ko.footer, right: "프로덕트 매니저 지망, 퀸스" },
   },
 };
 
