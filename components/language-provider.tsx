@@ -1,13 +1,17 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { dict, htmlLang, type Dict, type Locale } from "@/lib/i18n";
+import { usePathname } from "next/navigation";
+import { dicts, htmlLang, type Dict, type Locale, type Variant } from "@/lib/i18n";
 
-type Ctx = { locale: Locale; setLocale: (l: Locale) => void };
+type Ctx = { locale: Locale; setLocale: (l: Locale) => void; variant: Variant };
 
 const LanguageContext = createContext<Ctx | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  // The PM-focused copy lives under /pm; everything else uses the default set.
+  const variant: Variant = pathname?.startsWith("/pm") ? "pm" : "swe";
   const [locale, setLocaleState] = useState<Locale>("en");
 
   // Restore the saved language after hydration (initial render is "en", which
@@ -31,7 +35,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ locale, setLocale }}>
+    <LanguageContext.Provider value={{ locale, setLocale, variant }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -43,6 +47,11 @@ export function useLocale(): Ctx {
   return c;
 }
 
+export function useVariant(): Variant {
+  return useLocale().variant;
+}
+
 export function useT(): Dict {
-  return dict[useLocale().locale];
+  const { locale, variant } = useLocale();
+  return dicts[variant][locale];
 }
