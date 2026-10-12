@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/lib/content";
-import { useT } from "./language-provider";
+import { useT, useVariant } from "./language-provider";
 import { LangToggle } from "./lang-toggle";
 import { Container } from "./container";
 
 export function Nav() {
   const t = useT();
+  const variant = useVariant();
   const [active, setActive] = useState("");
   const [pinned, setPinned] = useState(false);
   const [mode, setMode] = useState<"light" | "dark">("dark");
@@ -90,6 +91,12 @@ export function Nav() {
             </nav>
 
             <div className="flex items-center gap-2 justify-self-end">
+              <a
+                href={variant === "pm" ? "/" : "/pm/"}
+                className="hidden rounded-full border border-line px-[13px] py-[7px] font-mono text-[0.78rem] text-dim transition hover:border-faint hover:text-ink sm:inline-flex"
+              >
+                {variant === "pm" ? t.switcher.toSwe : t.switcher.toPm}
+              </a>
               <LangToggle />
               <button
                 onClick={toggleTheme}
