@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/* Design read: solo design-engineer portfolio, editorial / restrained. Dials 7 / 5 / 3.
+   Palette lock: ONE accent (rose) on a zinc neutral base, both light + dark.
+   Shape lock: cards/panels 16px radius; buttons and the floating nav bar are full-pill.
+   Token strategy: CSS variables (taste-skill Section 8.A). */
+
+@theme inline {
+  /* Display: Playfair Display, an elegant high-contrast serif (the editorial
+     L'Oreal-style voice). Body: SF Pro (system sans). "mono" is intentionally a
+     clean sans here so micro-labels read editorial rather than techy; the one
+     real monospace left (the heart equation) sets its own family inline. */
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Helvetica Neue", Arial, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--fg);
+  --color-dim: var(--fg-dim);
+  --color-faint: var(--fg-faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-btn: var(--btn-bg);
+  --color-btn-ink: var(--btn-fg);
+
+  --radius-card: 16px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark is the default (bare :root). Light is opt-in via [data-theme="light"].
+   Accent: pastel blue, lifted on dark, deepened on light for contrast. */
+:root {
+  --bg: #0a0a0f;
+  --surface: #15161c;
+  --surface-2: #1e1f26;
+  --fg: #f3f5fb;
+  --fg-dim: #a6abbc;
+  --fg-faint: #5b6072;
+  --line: #272a33;
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --accent: #93c5fd;        /* pastel blue (blue-300) */
+  --accent-ink: #0a0b10;
+  --btn-bg: #f3f5fb;
+  --btn-fg: #0a0a0f;
+  --glass: rgba(16, 17, 22, 0.64);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef0f4;
+  --fg: #14151a;
+  --fg-dim: #555a68;
+  --fg-faint: #9aa0ae;
+  --line: #e3e6ec;
+  --line-soft: rgba(20, 21, 26, 0.07);
+  --accent: #3b82f6;        /* blue-500, readable on light */
+  --accent-ink: #ffffff;
+  --btn-bg: #14151a;
+  --btn-fg: #f6f7f9;
+  --glass: rgba(255, 255, 255, 0.72);
+  color-scheme: light;
+}
+
+/* the scroll cat: a GitHub-Octocat-style grey cat that walks (stepping legs,
+   body bob, swaying tail) and blinks. Grey flips per theme so it stays visible. */
+:root {
+  --cat-body: #aeb4bf;
+  --cat-eye: #f4f6fb;
+  --cat-pupil: #14151a;
+}
+:root[data-theme="light"] {
+  --cat-body: #2b2f36;
+}
+.cat-svg {
+  transform-origin: bottom center;
+  transition: transform 0.18s ease;
+}
+.cat-tail {
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+  animation: cat-tail 3s ease-in-out infinite;
+}
+.cat-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cat-blink 5.5s ease-in-out infinite;
+}
+/* mid-leap: stretch the body for the leap */
+.cat.jumping .cat-svg {
+  transform: scaleX(1.08) scaleY(0.9);
+}
+/* squash on landing */
+.cat.landing .cat-svg {
+  animation: cat-land 0.28s ease;
+}
+@keyframes cat-land {
+  0% { transform: scaleX(1.12) scaleY(0.76); }
+  55% { transform: scaleX(0.95) scaleY(1.08); }
+  100% { transform: scaleX(1) scaleY(1); }
+}
+@keyframes cat-tail {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes cat-blink {
+  0%, 86%, 100% { transform: scaleY(1); }
+  89%, 95% { transform: scaleY(0.08); }
+  92% { transform: scaleY(1); }
+}
+/* Logos drifting around the contact section */
+.float-chip {
+  animation-name: float-chip;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+@keyframes float-chip {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-11px); }
+}
+/* Transparent logo recolored to the foreground tint via mask (flips with theme) */
+.float-logo {
+  display: block;
+  background-color: var(--fg);
+  opacity: 0.6;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cat-svg, .cat-tail, .cat-eyes, .float-chip { animation: none; transition: none; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Placeholder project plates (palette-locked: rose + neutral only).
+   These are honest placeholders, not fake product screenshots. Replace by
+   setting `image` on a project in lib/content.ts once you add the file. */
+.plate-p1 {
+  background: var(--surface);
+}
+.plate-p2 {
+  background: var(--surface-2);
+}
+.plate-p3 {
+  background: var(--surface);
+}
+.plate-p4 {
+  background: var(--surface-2);
+}
+
+
+/* Glass nav defaults to a translucent fill; opaque fallback when the viewer
+   prefers reduced transparency (taste-skill 5: provide a solid fallback). */
+.nav-glass {
+  background: var(--glass);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .nav-glass {
+    background: var(--surface) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
