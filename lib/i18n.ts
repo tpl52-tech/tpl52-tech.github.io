@@ -66,7 +66,7 @@ export const dict: Record<Locale, Dict> = {
     work: {
       heading: "A few favorites",
       blurbs: {
-        reuse: "An iOS and Android marketplace I've led for the past year and a half, built with Cornell Engineers Without Borders for Finger Lakes ReUse, a nonprofit that reported about $3.3M in sales in 2025. Shoppers browse, filter, and buy secondhand goods with in-app payment and scheduled pickup; donors list items and staff approve and price them.",
+        reuse: "An iOS and Android marketplace I've been leading for nearly a year, built with Cornell Engineers Without Borders for Finger Lakes ReUse, a nonprofit that reported about $3.3M in sales in 2025. Shoppers browse, filter, and buy secondhand goods with in-app payment and scheduled pickup; donors list items and staff approve and price them.",
         borderless: "A system I built to run the engineering pipeline of my EWB software team, always on a tight deadline. It's a concurrent, zero-dependency TypeScript daemon that coordinates AI coding agents in isolated git worktrees, driving each pull request through CI and a second agent's code review and fixing failures until it's merge-ready. A pure functional core keeps all live I/O (agents, CI, Git, Linear, Postgres) at the edges.",
         greenlight: "A testing system for that marketplace that lets non-technical volunteers QA real features: screen-verifiable tickets become tap-through run sheets in an Apple-styled web app with live shared results, while backend-only work (RLS, triggers, migrations) is verified automatically by an agent cross-checked against deterministic database probes.",
       },
@@ -122,7 +122,7 @@ export const dict: Record<Locale, Dict> = {
     work: {
       heading: "Quelques favoris",
       blurbs: {
-        reuse: "Une marketplace iOS et Android dont je dirige le développement depuis un an et demi, construite avec Cornell Engineers Without Borders pour Finger Lakes ReUse, une association qui a réalisé environ 3,3 millions de dollars de ventes en 2025. Les acheteurs parcourent, filtrent et achètent des articles d'occasion avec paiement intégré et retrait programmé ; les donateurs publient leurs articles et l'équipe les valide et fixe leur prix.",
+        reuse: "Une marketplace iOS et Android dont je dirige le développement depuis près d'un an, construite avec Cornell Engineers Without Borders pour Finger Lakes ReUse, une association qui a réalisé environ 3,3 millions de dollars de ventes en 2025. Les acheteurs parcourent, filtrent et achètent des articles d'occasion avec paiement intégré et retrait programmé ; les donateurs publient leurs articles et l'équipe les valide et fixe leur prix.",
         borderless: "Un système que j'ai conçu pour faire tourner le pipeline d'ingénierie de mon équipe logicielle EWB, toujours soumise à des délais serrés. C'est un daemon TypeScript concurrent et sans dépendances qui coordonne des agents de codage IA dans des worktrees Git isolés, pilotant chaque pull request à travers la CI et la revue de code d'un second agent, et corrigeant les échecs jusqu'à ce que ce soit prêt à fusionner. Un cœur purement fonctionnel garde toutes les I/O réelles (agents, CI, Git, Linear, Postgres) en périphérie.",
         greenlight: "Un système de test pour cette marketplace qui permet à des bénévoles non techniques de faire le QA de vraies fonctionnalités : les tickets vérifiables à l'écran deviennent des parcours de test tactiles dans une application web au style Apple, avec des résultats partagés en direct, tandis que le travail purement backend (RLS, triggers, migrations) est vérifié automatiquement par un agent recoupé avec des sondes de base de données déterministes.",
       },
@@ -178,7 +178,7 @@ export const dict: Record<Locale, Dict> = {
     work: {
       heading: "제가 좋아하는 몇 가지",
       blurbs: {
-        reuse: "제가 1년 반 동안 이끌어 온 iOS·안드로이드 마켓플레이스로, 코넬 Engineers Without Borders와 함께 Finger Lakes ReUse를 위해 만들었습니다. 이 비영리단체는 2025년에 약 330만 달러의 매출을 올렸어요. 구매자는 중고 물품을 둘러보고 필터링해 앱 내 결제와 예약 픽업으로 구매하고, 기부자는 물품을 올리며 담당 직원이 이를 승인하고 가격을 매깁니다.",
+        reuse: "제가 거의 1년 동안 이끌어 온 iOS·안드로이드 마켓플레이스로, 코넬 Engineers Without Borders와 함께 Finger Lakes ReUse를 위해 만들었습니다. 이 비영리단체는 2025년에 약 330만 달러의 매출을 올렸어요. 구매자는 중고 물품을 둘러보고 필터링해 앱 내 결제와 예약 픽업으로 구매하고, 기부자는 물품을 올리며 담당 직원이 이를 승인하고 가격을 매깁니다.",
         borderless: "늘 마감에 쫓기는 제 EWB 소프트웨어 팀의 엔지니어링 파이프라인을 운영하기 위해 제가 만든 시스템입니다. 의존성이 전혀 없는 동시성 TypeScript 데몬으로, 격리된 Git worktree에서 AI 코딩 에이전트를 조율하며, 각 풀 리퀘스트를 CI와 두 번째 에이전트의 코드 리뷰를 거쳐 진행시키고 실패를 머지 가능한 상태가 될 때까지 수정합니다. 순수 함수형 코어가 모든 실제 I/O(에이전트, CI, Git, Linear, Postgres)를 가장자리에 둡니다.",
         greenlight: "그 마켓플레이스를 위한 테스트 시스템으로, 비개발자 자원봉사자도 실제 기능을 QA할 수 있게 해줍니다. 화면에서 확인 가능한 티켓은 Apple 스타일 웹앱에서 탭으로 진행하는 체크리스트가 되어 결과가 실시간으로 공유되고, 백엔드 전용 작업(RLS, 트리거, 마이그레이션)은 결정론적 데이터베이스 프로브와 교차 검증하는 에이전트가 자동으로 검증합니다.",
       },
@@ -235,7 +235,7 @@ export const dictPM: Record<Locale, Dict> = {
       ...dict.en.work,
       heading: "A few things I've shipped",
       blurbs: {
-        reuse: "A marketplace I've led for the past year and a half, built with Cornell Engineers Without Borders for Finger Lakes ReUse, a nonprofit that reported about $3.3M in sales in 2025. I decide what gets built and in what order: shoppers browse, filter, and buy secondhand goods with in-app payment and scheduled pickup, while donors list items and staff approve and price them. The real work is choosing which of those flows matters most next and making sure it lands for real users.",
+        ...dict.en.work.blurbs,
         borderless: "A system I built to run my EWB team's delivery pipeline when we were always against a deadline. It coordinates AI coding agents to take each change through code review and CI until it is ready to merge, so a small volunteer team ships like a much bigger one. It came from a product instinct: find the real bottleneck, which was throughput and not ideas, and remove it.",
         greenlight: "A testing system that lets non-technical volunteers QA real features. Screen-verifiable work becomes tap-through run sheets in a clean web app with live shared results, while backend-only changes are checked automatically. I designed it so quality was no longer gated on engineers, which let the team move faster without shipping regressions.",
       },
@@ -281,7 +281,7 @@ export const dictPM: Record<Locale, Dict> = {
       ...dict.fr.work,
       heading: "Quelques réalisations",
       blurbs: {
-        reuse: "Une marketplace dont je dirige le développement depuis un an et demi, construite avec Cornell Engineers Without Borders pour Finger Lakes ReUse, une association qui a réalisé environ 3,3 millions de dollars de ventes en 2025. Je décide de ce qui est construit et dans quel ordre : les acheteurs parcourent, filtrent et achètent des articles d'occasion avec paiement intégré et retrait programmé, tandis que les donateurs publient leurs articles et l'équipe les valide et fixe leur prix. Le vrai travail, c'est de choisir quel parcours compte le plus ensuite et de m'assurer qu'il fonctionne pour de vrais utilisateurs.",
+        ...dict.fr.work.blurbs,
         borderless: "Un système que j'ai conçu pour faire tourner le pipeline de livraison de mon équipe EWB quand nous étions toujours soumis à des délais serrés. Il coordonne des agents de codage IA pour faire passer chaque changement par la revue de code et la CI jusqu'à ce qu'il soit prêt à fusionner, pour qu'une petite équipe de bénévoles livre comme une bien plus grande. C'est né d'un instinct produit : trouver le vrai goulot d'étranglement, qui était le débit et non les idées, et le supprimer.",
         greenlight: "Un système de test qui permet à des bénévoles non techniques de faire le QA de vraies fonctionnalités. Le travail vérifiable à l'écran devient des parcours de test tactiles dans une application web épurée, avec des résultats partagés en direct, tandis que les changements purement backend sont vérifiés automatiquement. Je l'ai conçu pour que la qualité ne dépende plus des ingénieurs, ce qui a permis à l'équipe d'aller plus vite sans livrer de régressions.",
       },
@@ -327,7 +327,7 @@ export const dictPM: Record<Locale, Dict> = {
       ...dict.ko.work,
       heading: "제가 만든 몇 가지",
       blurbs: {
-        reuse: "제가 1년 반 동안 이끌어 온 마켓플레이스로, 코넬 Engineers Without Borders와 함께 Finger Lakes ReUse를 위해 만들었습니다. 이 비영리단체는 2025년에 약 330만 달러의 매출을 올렸어요. 무엇을 어떤 순서로 만들지 제가 결정합니다. 구매자는 중고 물품을 둘러보고 필터링해 앱 내 결제와 예약 픽업으로 구매하고, 기부자는 물품을 올리며 담당 직원이 이를 승인하고 가격을 매깁니다. 진짜 중요한 일은 다음에 어떤 흐름이 가장 중요한지 고르고, 그것이 실제 사용자에게 제대로 닿게 하는 것입니다.",
+        ...dict.ko.work.blurbs,
         borderless: "늘 마감에 쫓기던 제 EWB 팀의 배포 파이프라인을 운영하려고 만든 시스템입니다. AI 코딩 에이전트를 조율해 각 변경을 코드 리뷰와 CI를 거쳐 머지 가능한 상태까지 끌고 가서, 작은 자원봉사 팀이 훨씬 큰 팀처럼 배포하게 해줍니다. 프로덕트적 직감에서 출발했어요. 진짜 병목(아이디어가 아니라 처리량)을 찾아 없애자는 것이었죠.",
         greenlight: "비개발자 자원봉사자도 실제 기능을 QA할 수 있게 해주는 테스트 시스템입니다. 화면에서 확인 가능한 작업은 깔끔한 웹앱에서 탭으로 진행하는 체크리스트가 되어 결과가 실시간으로 공유되고, 백엔드 전용 변경은 자동으로 검증됩니다. 품질이 더 이상 엔지니어에게만 묶이지 않도록 설계해, 팀이 회귀 없이 더 빠르게 움직일 수 있게 했습니다.",
       },
