@@ -98,12 +98,6 @@ export function Nav() {
               >
                 {mode === "dark" ? t.ui.light : t.ui.dark}
               </button>
-              <a
-                href="#contact"
-                className="hidden whitespace-nowrap rounded-full bg-btn px-4 py-[9px] text-[0.85rem] text-btn-ink transition active:translate-y-px active:scale-[0.985] sm:inline-flex"
-              >
-                {t.cta.getInTouch}
-              </a>
             </div>
           </div>
         </Container>

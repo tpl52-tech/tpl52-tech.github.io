@@ -40,7 +40,7 @@ export type Dict = {
   work: { heading: string; blurbs: Record<string, string>; privateNote: string };
   experience: { heading: string; bullets: Record<string, string[]> };
   workedAt: string;
-  contact: { heading: string; sub: string };
+  contact: { heading: string };
   footer: { left: string; right: string };
 };
 
@@ -95,7 +95,6 @@ export const dict: Record<Locale, Dict> = {
     workedAt: "Places I've worked",
     contact: {
       heading: "Let's work together.",
-      sub: "Have a product that deserves real craft? I'm booking interface and motion work for the next quarter.",
     },
     footer: { left: "© 2026 Tess Lee", right: "Software engineer, Queens NY" },
   },
@@ -150,7 +149,6 @@ export const dict: Record<Locale, Dict> = {
     workedAt: "Où j'ai travaillé",
     contact: {
       heading: "Travaillons ensemble.",
-      sub: "Un produit qui mérite un vrai soin ? Je réserve des missions d'interface et de motion pour le prochain trimestre.",
     },
     footer: { left: "© 2026 Tess Lee", right: "Ingénieure logiciel, Queens NY" },
   },
@@ -205,7 +203,6 @@ export const dict: Record<Locale, Dict> = {
     workedAt: "제가 일한 곳",
     contact: {
       heading: "함께 일해요.",
-      sub: "진짜 완성도가 필요한 제품이 있나요? 다음 분기 인터페이스·모션 작업을 받고 있습니다.",
     },
     footer: { left: "© 2026 Tess Lee", right: "소프트웨어 엔지니어, 퀸스" },
   },
@@ -259,7 +256,6 @@ export const dictPM: Record<Locale, Dict> = {
     },
     contact: {
       heading: "Let's build something people use.",
-      sub: "I'm looking for product management internships where I can own scope, work closely with engineering, and ship to real users. If that sounds like your team, reach out.",
     },
     footer: { ...dict.en.footer, right: "Aspiring product manager, Queens NY" },
   },
@@ -305,7 +301,6 @@ export const dictPM: Record<Locale, Dict> = {
     },
     contact: {
       heading: "Construisons quelque chose d'utile.",
-      sub: "Je cherche un stage en product management où je pourrai porter le périmètre, travailler main dans la main avec l'ingénierie et livrer à de vrais utilisateurs. Si cela ressemble à votre équipe, écrivez-moi.",
     },
     footer: { ...dict.fr.footer, right: "Future product manager, Queens NY" },
   },
@@ -351,7 +346,6 @@ export const dictPM: Record<Locale, Dict> = {
     },
     contact: {
       heading: "사람들이 쓰는 걸 함께 만들어요.",
-      sub: "범위를 직접 책임지고, 엔지니어링과 가까이 협업하며, 실제 사용자에게 배포할 수 있는 프로덕트 매니지먼트 인턴십을 찾고 있어요. 그런 팀이라면 편하게 연락 주세요.",
     },
     footer: { ...dict.ko.footer, right: "프로덕트 매니저 지망, 퀸스" },
   },

@@ -22,9 +22,6 @@ export function Contact() {
             {t.contact.heading}
           </h2>
         </Reveal>
-        <Reveal delay={0.06}>
-          <p className="mx-auto mt-[18px] max-w-[46ch] text-dim">{t.contact.sub}</p>
-        </Reveal>
         <Reveal delay={0.1}>
           {/* (8) a function that draws a heart */}
           <HeartPlot hint="draw the heart" />
